@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './division.component.html'
 })
 export class LearnDivisionComponent {
-  title = 'learn-division';
 }

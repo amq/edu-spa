@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { RootComponent } from './components/root.component';
@@ -26,9 +27,11 @@ import { routing } from './app.routing';
     LearnDivisionComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule, 
     HttpModule,
+    ReactiveFormsModule,
     routing
   ],
   providers: [],

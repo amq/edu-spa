@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './root.component.html'
 })
 export class RootComponent {
-  title = 'root';
 }

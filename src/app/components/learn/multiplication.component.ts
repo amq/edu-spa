@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './multiplication.component.html'
 })
 export class LearnMultiplicationComponent {
-  title = 'learn-multiplication';
 }

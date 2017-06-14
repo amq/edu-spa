@@ -1,3 +1,67 @@
 <body>
-    <h1>practice</h1>
+    <h2><a routerLink="/"><span><i class="fa fa-graduation-cap" aria-hidden="true"></i></span></a></h2>
+    <div *ngIf="!showSubmit">
+
+        <div *ngIf="!running">
+            <h2>Wie schwer sollen die Aufgaben sein?</h2>
+            <div [(ngModel)]="severity" ngbRadioGroup name="radioBasic">
+                <label class="btn btn-primary">
+                    <input type="radio" [value]="1">leicht
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" [value]="2">mittel
+                    </label>
+                <label class="btn btn-primary">
+                    <input type="radio" [value]="3">schwer
+                </label>
+            </div>
+
+            <h2>Was willst du üben?</h2>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary" [class.active]="selectedOperations.addition">
+                    <input type="checkbox" [(ngModel)]="selectedOperations.addition"> +
+                    </label>
+                <label class="btn btn-primary" [class.active]="selectedOperations.subtraction">
+                    <input type="checkbox" [(ngModel)]="selectedOperations.subtraction"> -
+                    </label>
+                <label class="btn btn-primary" [class.active]="selectedOperations.multiplication">
+                    <input type="checkbox" [(ngModel)]="selectedOperations.multiplication"> *
+                </label>
+                <label class="btn btn-primary" [class.active]="selectedOperations.division">
+                    <input type="checkbox" [(ngModel)]="selectedOperations.division"> :
+                </label>
+            </div>
+            <br>
+            <button label class="btn btn-primary" (click)="toggleRunning(true)">Start</button>
+        </div>
+        <div *ngIf="running">
+            <p>Wie viel ist</p>
+
+            <p>{{numbers[0]}} {{usedOperator}} {{numbers[1]}} = <input type="text" name="result" [(ngModel)]="result" /></p>
+
+            <button label class="btn btn-primary" (click)="checkCalc()">prüfen</button>
+            <div *ngIf="check">
+                <div *ngIf="correct">
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </div>
+                <div *ngIf="!correct">
+                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                </div>
+                <div *ngIf="alreadyChecked > 1">
+                    <p>Du hast diese Rechnung bereits versucht! Es gibt noch genug andere.</p>
+                </div>
+            </div>
+
+            <p>Punkte: {{score}}</p>
+
+            <button label class="btn btn-primary" (click)="newExercise()">neue Rechnung</button>
+            <br><br>
+            <button label class="btn btn-primary" (click)="toggleRunning(false)">Ende</button>
+        </div>
+    </div>
+    <div *ngIf="showSubmit">
+        <p>Name: <input type="text" name="userName" [(ngModel)]="userName" /></p>
+        <button label class="btn btn-primary" (click)="submitScore()">speichern</button>
+    </div>
+
 </body>

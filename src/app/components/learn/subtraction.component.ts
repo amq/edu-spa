@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './subtraction.component.html'
 })
 export class LearnSubtractionComponent {
-  title = 'learn-subtraction';
 }
