@@ -60,7 +60,9 @@
         </div>
     </div>
     <div *ngIf="showSubmit">
-        <p>Name: <input type="text" name="userName" [(ngModel)]="userName" /></p>
+        <h1>Wie heißt du?</h1>
+        <p>Du hast {{score}} Punkte erreicht!</p>
+        <p><input type="text" name="userName" [(ngModel)]="userName" /></p>
         <button label class="btn btn-primary" (click)="submitScore()">speichern</button>
     </div>
 
