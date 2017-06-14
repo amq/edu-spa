@@ -6,6 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { RootComponent } from './components/root.component';
 import { LearnComponent } from './components/learn.component';
+import { LearnAdditionComponent } from './components/learn/addition.component';
+import { LearnSubtractionComponent } from './components/learn/subtraction.component';
+import { LearnMultiplicationComponent } from './components/learn/multiplication.component';
+import { LearnDivisionComponent } from './components/learn/division.component';
 import { PracticeComponent } from './components/practice.component';
 
 import { routing } from './app.routing';
@@ -15,7 +19,11 @@ import { routing } from './app.routing';
     AppComponent,
     RootComponent,
     LearnComponent,
-    PracticeComponent
+    PracticeComponent,
+    LearnAdditionComponent,
+    LearnSubtractionComponent,
+    LearnMultiplicationComponent,
+    LearnDivisionComponent
   ],
   imports: [
     BrowserModule,
