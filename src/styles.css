@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #EFFBFB;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    color: #0175D8;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.logo {
+    font-size: 200px;
+    color: #0175D8;
+}
+
+.entry {
+    text-align: center;
+    font-size: 80px;
+}
+
+.header {
+    text-align: left;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+}
+
+.header_headline {
+    color: #0175D8;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+
+table {
+    width:70%; 
+    height: 70%;
+    margin-left:15%; 
+    margin-right:15%;
+    margin-top:15%; 
+    margin-bottom:15%;
+    border-collapse: separate; 
+    border-spacing: 20px;
+}
+
+td {
+    border-radius: 50px;
+    height: 10px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    background-color:#0175D8;
+    font-size: 100px;
+    vertical-align: center;
+}
+
+
+td:hover {
+    background-color: #014C8D;
+    color: white;
+}
+
+.footer {
+    text-align: left;
+    position: fixed;
+    vertical-align: bottom;
+    left: 0px;
+    bottom: 0px;
+    font-size: 50px;
+}
+
+.background {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.center {
+    position: auto;
+    text-align: center;
+}
+
+.correct {
+    color: lightgreen;
+    font-size: 90px;
+}
+
+.wrong {
+    color: lightcoral;
+    font-size: 90px;
+}

@@ -14,7 +14,6 @@ export class PracticeComponent {
     result: number;
     check: boolean = false;
     correct: boolean;
-    alreadyChecked: number;
     userName: string;
     selectedOperations = {
         addition: true,
@@ -84,7 +83,7 @@ export class PracticeComponent {
         }
 
         this.numbers = [numberA, numberB];
-        this.alreadyChecked = 0;
+        this.result = null;
     }
 
     checkCalc() {
@@ -106,15 +105,11 @@ export class PracticeComponent {
             correctResult = this.numbers[0] / this.numbers[1];
         }
 
-        if (this.alreadyChecked == 0) {
-            if (correctResult == this.result) {
-                this.score += this.severity;
-                this.correct = true;
-            } else {
-                this.correct = false;
-            }
+        if (correctResult == this.result) {
+            this.score += this.severity;
+            this.correct = true;
+        } else {
+            this.correct = false;
         }
-
-        this.alreadyChecked++;
     }
 }
