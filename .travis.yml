@@ -11,8 +11,7 @@ branches:
     - master
 
 before_script:
-  - npm install -g firebase-tools
-  - npm install -g @angular/cli
+  - npm install firebase-tools
 
 script:
   - ng build --prod
