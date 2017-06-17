@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "8.1"
+
+cache:
+  directories:
+    - node_modules
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install firebase-tools
+
+script:
+  - ng build --prod
+
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
