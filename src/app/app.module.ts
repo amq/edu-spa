@@ -6,7 +6,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../environments/environment';
+import { firebaseConfig } from '../environments/firebase.config';
 
 import { AppComponent } from './app.component';
 import { RootComponent } from './components/root.component';
@@ -37,7 +37,7 @@ import { routing } from './app.routing';
     HttpModule,
     ReactiveFormsModule,
     routing,
-    AngularFireModule.initializeApp(environment.firebase, 'edu-spa'),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
