@@ -23,10 +23,12 @@ export class PracticeComponent {
     };
     operations: string[];
     usedOperator: string;
+    count = false;
 
     constructor() {
         this.operations = [];
     }
+
     toggleRunning(start) {
         this.running = start;
         if (start) {
@@ -49,7 +51,7 @@ export class PracticeComponent {
             this.newExercise();
         }
 
-        if (!start) {
+        if (!start && this.count) {
             this.showSubmit = true;
         }
     }
@@ -106,7 +108,9 @@ export class PracticeComponent {
         }
 
         if (correctResult == this.result) {
-            this.score += this.severity;
+            if (this.count) {
+                this.score += this.severity;
+            }
             this.correct = true;
         } else {
             this.correct = false;

@@ -37,6 +37,15 @@
                 </label>
             </div>
             <br>
+            <div [(ngModel)]="count" ngbRadioGroup name="radioBasic">
+                <label class="btn btn-primary">
+                    <input type="radio" [value]="false">ohne Punkte
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" [value]="true">mit Punkte
+                </label>
+            </div>
+            <br>
             <button label class="btn btn-primary" (click)="toggleRunning(true)">Start</button>
         </div>
         <div *ngIf="running">
@@ -59,14 +68,16 @@
                 <button label class="btn btn-primary" (click)="checkCalc()">prüfen</button>
             </div>
 
-            <p>Punkte: {{score}}</p>
-
+            <div *ngIf="count">
+                <p>Punkte: {{score}}</p>
+            </div>
+            <br>
             <button label class="btn btn-primary" (click)="newExercise()">neue Rechnung</button>
             <br><br>
             <button label class="btn btn-primary" (click)="toggleRunning(false)">Ende</button>
         </div>
     </div>
-    <div *ngIf="showSubmit">
+    <div *ngIf="showSubmit && count">
         <br><br>
         <h1>Wie heißt du?</h1>
         <p>Du hast {{score}} Punkte erreicht!</p>
