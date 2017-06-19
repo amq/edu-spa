@@ -10,9 +10,9 @@
             <th class="highscore">Punkte</th>
         </tr>
         <tr class="highscore" *ngFor="let item of items | async | orderBy:order:ascending; let i = index">
-            <td class="highscore">{{ i + 1 }}</td>
-            <td class="highscore">{{item.text}}</td>
-            <td class="highscore">{{item.score}}</td>
+            <td>{{ i + 1 }}</td>
+            <td>{{item.text}}</td>
+            <td>{{item.score}}</td>
         </tr>
     </table>
     <button class="btn btn-primary" (click)="deleteEverything()">alles löschen</button>
