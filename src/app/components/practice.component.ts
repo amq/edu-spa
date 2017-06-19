@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { HighscoreComponent } from './highscore.component';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
     selector: 'practice',
-    templateUrl: './practice.component.html'
+    templateUrl: './practice.component.html',
+    providers: [HighscoreComponent]
 })
 export class PracticeComponent {
     running: boolean = false;
@@ -24,8 +27,9 @@ export class PracticeComponent {
     operations: string[];
     usedOperator: string;
     count = false;
+    items: FirebaseListObservable<any>;
 
-    constructor() {
+    constructor(private HighscoreComponent: HighscoreComponent) {
         this.operations = [];
     }
 
@@ -47,7 +51,6 @@ export class PracticeComponent {
             if (this.selectedOperations.division) {
                 this.operations.push(':');
             }
-
             this.newExercise();
         }
 
@@ -56,8 +59,16 @@ export class PracticeComponent {
         }
     }
 
-    submitScore() {
-        this.showSubmit = false;
+    submitScore(submit: boolean) {
+        if (submit) {
+            if (this.userName != null) {
+                this.HighscoreComponent.addItem(this.userName, this.score);
+                this.showSubmit = false;
+            }
+        } else {
+            this.running = false;
+            this.showSubmit = false;
+        }
     }
 
     newExercise() {

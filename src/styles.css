@@ -50,7 +50,7 @@ p {
 }
 
 
-table {
+table.learn {
     width:70%; 
     height: 70%;
     margin-left:15%; 
@@ -61,7 +61,7 @@ table {
     border-spacing: 20px;
 }
 
-td {
+td.learn {
     border-radius: 50px;
     height: 10px;
     width: 200px;
@@ -72,8 +72,7 @@ td {
     vertical-align: center;
 }
 
-
-td:hover {
+td.learn:hover {
     background-color: #014C8D;
     color: white;
 }
@@ -96,6 +95,31 @@ td:hover {
 .center {
     position: auto;
     text-align: center;
+}
+
+table.highscore {
+    width:70%; 
+    height: 70%;
+    margin-left:15%; 
+    margin-right:15%;
+    margin-top:15%; 
+    margin-bottom:15%;
+    border-collapse: separate;
+}
+th.highscore {
+    font-size: 30px;
+    text-align: center;
+}
+
+td.highscore {
+    font-size: 20px;
+    background-color:#0175D8;
+    color: white;
+}
+
+tr.highscore:hover {
+    background-color: #014C8D;
+    color: white;
 }
 
 .correct {

@@ -37,6 +37,8 @@
                 </label>
             </div>
             <br>
+            <p class="btn btn-primary" routerLink="/highscore">Punkteliste</p>
+            <br>
             <div [(ngModel)]="count" ngbRadioGroup name="radioBasic">
                 <label class="btn btn-primary">
                     <input type="radio" [value]="false">ohne Punkte
@@ -74,15 +76,15 @@
             <br>
             <button label class="btn btn-primary" (click)="newExercise()">neue Rechnung</button>
             <br><br>
-            <button label class="btn btn-primary" (click)="toggleRunning(false)">Ende</button>
+            <button label class="btn btn-primary" (click)="(score != 0) ? toggleRunning(false) : submitScore(false)">Ende</button>
         </div>
     </div>
-    <div *ngIf="showSubmit && count">
+    <div *ngIf="showSubmit && count && score != 0">
         <br><br>
         <h1>Wie heißt du?</h1>
         <p>Du hast {{score}} Punkte erreicht!</p>
         <p><input type="text" name="userName" [(ngModel)]="userName" /></p>
-        <button label class="btn btn-primary" (click)="submitScore()">speichern</button>
+        <button label class="btn btn-primary" (click)="submitScore(true)">speichern</button>
     </div>
 </div>
 <div class="footer">

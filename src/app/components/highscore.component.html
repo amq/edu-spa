@@ -1,0 +1,25 @@
+<div class="header">
+    <a routerLink="/"><span><i class="fa fa-graduation-cap" aria-hidden="true"></i></span></a>
+</div>
+
+<div class="center">
+    <table class="highscore">
+        <tr>
+            <th class="highscore">Platz</th>
+            <th class="highscore">Name</th>
+            <th class="highscore">Punkte</th>
+        </tr>
+        <tr class="highscore" *ngFor="let item of items | async | orderBy:order:ascending; let i = index">
+            <td class="highscore">{{ i + 1 }}</td>
+            <td class="highscore">{{item.text}}</td>
+            <td class="highscore">{{item.score}}</td>
+        </tr>
+    </table>
+    <button class="btn btn-primary" (click)="deleteEverything()">alles löschen</button>
+</div>
+
+<div class="footer">
+    <a routerLink="/practice"><span><i class="fa fa-reply" aria-hidden="true"></i></span></a>
+</div>
+
+<img class="background" src="assets/images/owl.png" alt="edu owl" width="10%">

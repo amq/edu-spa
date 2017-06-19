@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -16,8 +16,11 @@ import { LearnSubtractionComponent } from './components/learn/subtraction.compon
 import { LearnMultiplicationComponent } from './components/learn/multiplication.component';
 import { LearnDivisionComponent } from './components/learn/division.component';
 import { PracticeComponent } from './components/practice.component';
+import { HighscoreComponent } from './components/highscore.component';
 
 import { routing } from './app.routing';
+
+import { OrderBy } from './components/order.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +31,14 @@ import { routing } from './app.routing';
     LearnAdditionComponent,
     LearnSubtractionComponent,
     LearnMultiplicationComponent,
-    LearnDivisionComponent
+    LearnDivisionComponent,
+    HighscoreComponent,
+    OrderBy
   ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
-    FormsModule, 
+    FormsModule,
     HttpModule,
     ReactiveFormsModule,
     routing,

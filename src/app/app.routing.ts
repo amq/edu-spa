@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RootComponent } from './components/root.component';
 import { LearnComponent } from './components/learn.component';
 import { PracticeComponent } from './components/practice.component';
+import { HighscoreComponent } from './components/highscore.component';
 import { LearnAdditionComponent } from './components/learn/addition.component';
 import { LearnSubtractionComponent } from './components/learn/subtraction.component';
 import { LearnMultiplicationComponent } from './components/learn/multiplication.component';
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
     {
         path: 'practice',
         component: PracticeComponent
+    },
+    {
+        path: 'highscore',
+        component: HighscoreComponent
     }
 ];
 
