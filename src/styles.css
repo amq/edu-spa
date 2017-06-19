@@ -84,6 +84,7 @@ td.learn:hover {
     left: 0px;
     bottom: 0px;
     font-size: 50px;
+    color: #0175D8;
 }
 
 .background {
@@ -104,18 +105,22 @@ table.highscore {
     margin-right:15%;
     margin-top:15%; 
     margin-bottom:15%;
-    border-collapse: separate;
 }
+
 th.highscore {
     font-size: 30px;
     text-align: center;
 }
 
-td.highscore {
+tr.highscore {
     font-size: 20px;
     background-color:#0175D8;
     color: white;
 }
+
+tr.highscore:nth-child(even){
+    background-color: #659FD2
+    }
 
 tr.highscore:hover {
     background-color: #014C8D;
