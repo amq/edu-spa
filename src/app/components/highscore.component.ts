@@ -11,7 +11,12 @@ export class HighscoreComponent {
   ascending: boolean = false;
 
   constructor(db: AngularFireDatabase) {
-    this.items = db.list('/scores');
+    this.items = db.list('/scores', {
+      query: {
+      orderByChild: 'score',
+      limitToLast: 15
+      }
+    });
   }
   
   addItem(newName: string, score: number) {

@@ -9,7 +9,7 @@
             <th class="highscore">Name</th>
             <th class="highscore">Punkte</th>
         </tr>
-        <tr class="highscore" *ngFor="let item of items | async | orderBy:order:ascending; let i = index">
+        <tr class="highscore" *ngFor="let item of items | async | reverse; let i = index">
             <td>{{ i + 1 }}</td>
             <td>{{item.text}}</td>
             <td>{{item.score}}</td>

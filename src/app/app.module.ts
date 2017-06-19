@@ -20,7 +20,7 @@ import { HighscoreComponent } from './components/highscore.component';
 
 import { routing } from './app.routing';
 
-import { OrderBy } from './components/order.component';
+import { ReversePipe } from './components/reverse.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { OrderBy } from './components/order.component';
     LearnMultiplicationComponent,
     LearnDivisionComponent,
     HighscoreComponent,
-    OrderBy
+    ReversePipe
   ],
   imports: [
     NgbModule.forRoot(),
