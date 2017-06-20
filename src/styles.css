@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 body {
     background-color: #EFFBFB;
 }
@@ -9,6 +8,7 @@ h1 {
 }
 
 h2 {
+    margin-top: 20px;
     color: #0175D8;
     text-align: center;
 }
@@ -17,11 +17,6 @@ p {
     font-family: verdana;
     font-size: 20px;
     text-align: center;
-    
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 10%;
-    margin-left: 10%;
 }
 
 .logo {
@@ -29,9 +24,17 @@ p {
     color: #0175D8;
 }
 
-.entry {
+.calc {
     text-align: center;
-    font-size: 80px;
+    font-size: 40px;
+}
+
+input.calc {
+    text-align: center;
+    background-color: #CBFAFA;
+    border: 0;
+    font-size: 40px;
+    width: 90px;
 }
 
 .header {
@@ -96,15 +99,21 @@ td.learn:hover {
 .center {
     position: auto;
     text-align: center;
+    width: 92%; 
+    height: 70%;
+    margin-left: 4%; 
+    margin-right: 4%;
+    margin-top: 15%; 
+    margin-bottom: 15%;
 }
 
 table.highscore {
-    width:70%; 
+    width: 70%; 
     height: 70%;
-    margin-left:15%; 
-    margin-right:15%;
-    margin-top:15%; 
-    margin-bottom:15%;
+    margin-left: 15%; 
+    margin-right: 15%;
+    margin-top: 15%; 
+    margin-bottom: 15%;
 }
 
 th.highscore {
@@ -127,12 +136,17 @@ tr.highscore:hover {
     color: white;
 }
 
+p.score {
+    font-weight: bold;
+    font-size: 30px;
+}
+
 .correct {
     color: lightgreen;
-    font-size: 90px;
+    font-size: 120px;
 }
 
 .wrong {
     color: lightcoral;
-    font-size: 90px;
+    font-size: 120px;
 }

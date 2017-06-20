@@ -37,7 +37,6 @@
                 </label>
             </div>
             <br>
-            <p class="btn btn-primary" routerLink="/highscore">Punkteliste</p>
             <br>
             <div [(ngModel)]="count" ngbRadioGroup name="radioBasic">
                 <label class="btn btn-primary">
@@ -48,11 +47,15 @@
                 </label>
             </div>
             <br>
-            <button label class="btn btn-primary" (click)="toggleRunning(true)">Start</button>
+            <br>
+            <button label class="btn btn-success" (click)="toggleRunning(true)">Start</button>
+            <button class="btn btn-info" routerLink="/highscore">Punkteliste</button>
         </div>
         <div *ngIf="running">
             <p>Wie viel ist</p>
-            <p>{{numbers[0]}} {{usedOperator}} {{numbers[1]}} = <input type="text" name="result" [(ngModel)]="result" /></p>
+            <p class="calc">{{numbers[0]}} {{usedOperator}} {{numbers[1]}} = <input class="calc" type="text" name="result" [(ngModel)]="result"
+                /></p>
+
 
             <div *ngIf="check">
                 <div *ngIf="correct">
@@ -69,14 +72,13 @@
             <div *ngIf="!check">
                 <button label class="btn btn-primary" (click)="checkCalc()">prüfen</button>
             </div>
-
             <div *ngIf="count">
-                <p>Punkte: {{score}}</p>
+                <br><br>
+                <p class="score">Punkte: {{score}}</p>
             </div>
-            <br>
-            <button label class="btn btn-primary" (click)="newExercise()">neue Rechnung</button>
             <br><br>
-            <button label class="btn btn-primary" (click)="(score != 0) ? toggleRunning(false) : submitScore(false)">Ende</button>
+            <button label class="btn btn-danger" (click)="(score != 0) ? toggleRunning(false) : submitScore(false)">Ende</button>
+            <button label class="btn btn-info" (click)="newExercise()">neue Rechnung</button>
         </div>
     </div>
     <div *ngIf="showSubmit && count && score != 0">
