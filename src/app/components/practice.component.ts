@@ -39,6 +39,8 @@ export class PracticeComponent {
             this.score = 0;
             this.submitted = false;
 
+            this.operations = [];
+
             if (this.selectedOperations.addition) {
                 this.operations.push('+');
             }
@@ -51,6 +53,7 @@ export class PracticeComponent {
             if (this.selectedOperations.division) {
                 this.operations.push(':');
             }
+
             this.newExercise();
         }
 

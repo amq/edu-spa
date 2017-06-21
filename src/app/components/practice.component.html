@@ -48,7 +48,8 @@
             </div>
             <br>
             <br>
-            <button label class="btn btn-success" (click)="toggleRunning(true)">Start</button>
+            <button *ngIf="selectedOperations.addition || selectedOperations.subtraction || selectedOperations.multiplication || selectedOperations.division"
+                label class="btn btn-success" (click)="toggleRunning(true)">Start</button>
             <button class="btn btn-info" routerLink="/highscore">Punkteliste</button>
         </div>
         <div *ngIf="running">
